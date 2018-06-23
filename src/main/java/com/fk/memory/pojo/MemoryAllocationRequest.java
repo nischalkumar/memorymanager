@@ -1,4 +1,4 @@
-package com.fk.memory;
+package com.fk.memory.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

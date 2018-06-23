@@ -1,5 +1,7 @@
-package com.fk.memory;
+package com.fk.memory.service;
 
+import com.fk.memory.pojo.MemoryAllocationRequest;
+import com.fk.memory.pojo.MemoryResponse;
 import javafx.util.Pair;
 
 import java.util.List;
