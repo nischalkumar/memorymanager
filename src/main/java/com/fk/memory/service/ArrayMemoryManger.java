@@ -3,6 +3,7 @@ package com.fk.memory.service;
 import com.fk.memory.pojo.MemoryAllocationRequest;
 import com.fk.memory.pojo.MemoryResponse;
 import com.fk.memory.pojo.ResponseCode;
+import com.fk.memory.service.allocator.AllocatorFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;

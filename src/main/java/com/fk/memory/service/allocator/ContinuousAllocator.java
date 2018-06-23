@@ -1,8 +1,10 @@
-package com.fk.memory.service;
+package com.fk.memory.service.allocator;
 
 import com.fk.memory.pojo.MemoryAllocationRequest;
+import com.fk.memory.service.VariableBlock;
+import com.fk.memory.service.allocator.Allocator;
 
-public class ContinuousAllocator implements Allocator{
+public class ContinuousAllocator implements Allocator {
     public boolean allocate(MemoryAllocationRequest request, VariableBlock[] block) {
         for (int i = 0; i < block.length; i++) {
             if(block[i]==null) {
