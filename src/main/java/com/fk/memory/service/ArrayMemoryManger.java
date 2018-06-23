@@ -34,7 +34,7 @@ public class ArrayMemoryManger implements MemoryManger{
     public MemoryResponse free(String process, String variable) {
         int freeCont=0;
         for (int i = 0; i < block.length; i++) {
-            if(block[i].getProcess().equals(process) &&
+            if(block[i]!=null && block[i].getProcess().equals(process) &&
                     block[i].getVariable().equals(variable)) {
                 freeCont++;
                 block[i]=null;
@@ -47,7 +47,7 @@ public class ArrayMemoryManger implements MemoryManger{
     public MemoryResponse kill(String process) {
         int freeCont=0;
         for (int i = 0; i < block.length; i++) {
-            if(block[i].getProcess().equals(process)) {
+            if(block[i]!=null && block[i].getProcess().equals(process)) {
                 freeCont++;
                 block[i]=null;
             }
@@ -59,7 +59,7 @@ public class ArrayMemoryManger implements MemoryManger{
     public Map<String, List<Integer>> inspect(String process) {
         Map<String,List<Integer>> response= new HashMap<>();
         for (int i = 0; i < block.length; i++) {
-            if(block[i].getProcess().equals(process)) {
+            if(block[i]!=null && block[i].getProcess().equals(process)) {
                 List<Integer> indexList = response.getOrDefault(block[i].variable,new ArrayList<>());
                 indexList.add(i);
                 response.put(block[i].getVariable(), indexList);
